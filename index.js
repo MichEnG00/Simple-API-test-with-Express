@@ -13,6 +13,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.use((req,res,next) => {
     
+    console.log(`Cookies: ${req.cookies}`)
     res.statusCode = 200;
     res.setHeader('Content-Type','text/html')
     res.end('<html><body><h1>This is an express server</h1></body></html>')
