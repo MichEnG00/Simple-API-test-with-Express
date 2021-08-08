@@ -13,6 +13,7 @@ app.use(bodyParser.json());
 
 
 app.use('/dishes', dishRouter);
+//app.use('/dishes/:dishID', dishRouter);
 app.use(express.static(__dirname + '/public'));
 
 
