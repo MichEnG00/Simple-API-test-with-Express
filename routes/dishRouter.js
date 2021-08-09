@@ -26,7 +26,7 @@ dishRouter.route('/')
     })
     .delete((req,res,next) => {
         res.end('Deleting all the dishes');
-});
+    });
 
 
 dishRouter.route('/:dishId')
@@ -47,6 +47,6 @@ dishRouter.route('/:dishId')
     })
     .delete((req,res,next) => {
         res.end('Deleting the dish ' + req.params.dishId);
-});
+    });
 
 module.exports = dishRouter;
