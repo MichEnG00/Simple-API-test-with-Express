@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 //importing the routers
 const dishRouter = require('./routes/dishRouter');
 const promotionsRouter = require('./routes/promotionsRouter');
-
+const leadersRouter = require('./routes/leadersRouter');
 const hostname = 'localhost';
 const port = 3000;
 
@@ -17,7 +17,8 @@ app.use(bodyParser.json());
 
 //mounting the routes
 app.use('/dishes', dishRouter);
-app.use('/promotions', promotionsRouter)
+app.use('/promotions', promotionsRouter);
+app.use('/leaders', leadersRouter);
 
 var fullPath = path.resolve(__dirname + 'public')
 app.use(express.static(fullPath));
